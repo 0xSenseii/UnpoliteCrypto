@@ -6,8 +6,6 @@
 	<h1>💣 Unpolite Crypto 💣</h1>
 	<div class="container">
 		<Card src="eth2.png" href="eth2.pdf"/>
-		<Card src="eth2.png" href="eth2.pdf"/>
-		<Card src="eth2.png" href="eth2.pdf"/>
 	</div>
 </main>
 
