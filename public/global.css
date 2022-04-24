@@ -1,0 +1,11 @@
+body {
+	background-color: black;
+	font-family: 'SF Pro Text', 'SF Pro Icons', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+
+h1 {
+	text-align: center;
+	font-size: 4em;
+	color:rgb(255, 217, 0);
+}
