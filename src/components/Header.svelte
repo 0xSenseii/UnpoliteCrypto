@@ -18,7 +18,7 @@
     /* place dot to the right of the h1 */
     .dot {
         position: absolute;
-        right: 5%;
+        left: 3%;
         top: 5%;
         font-size: 1.3em;
         color: #ffd900;
