@@ -7,7 +7,7 @@
 </script>
 
 <main>
-	<Header />
+	<Header connected={connected}/>
 
 	{#if connected === false}
 		<div class="container">
