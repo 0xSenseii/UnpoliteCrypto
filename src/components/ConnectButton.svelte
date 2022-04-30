@@ -1,48 +1,34 @@
 <script>
-    import Button from "./DownloadButton.svelte";
-    export let src;
-    export let href;
+    let account = null;
+    export let connected;
+
+    connected = false;
+
+    const connect = async() => {
+        if (window.ethereum) {
+            await window.ethereum.send("eth_requestAccounts");
+            window.web3 = new Web3(window.ethereum);
+            var accounts = await web3.eth.getAccounts();
+            account = accounts[0];
+            connected = true;
+        }
+    };
 </script>
 
-<div class="container__column">
-    <!-- Cover -->
-    <div class="content">
-        <img src="./previews/{src}" alt="preview" />
-        <Button href="./pdfs/{href}"/>
-    </div>
+<div class="container">
+    <button class="button-50" id="connectButton" on:click={connect}
+        >Connect to Metamask</button
+    >
 </div>
 
 <style>
-    img {
-        width: 50%;
-        height: auto;
-        border: 2px solid rgb(255, 217, 0);
-        border-radius: 5px;
-    }
-
-
-    .container__column {
-        /* center container column content */
-        margin: 15px auto;
+    /* center content from container class */
+    .container {
+        margin: 0 auto;
         display: flex;
-        flex-basis: 33%;
-
-        width: 50%;
-        text-align: center;
-
-        /* Layout each column */
-        flex-direction: column;
+        flex-wrap: wrap;
     }
 
-    .content {
-        /* align content into the center */
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    /* button
     .button-50 {
         appearance: button;
         background-color: #000;
@@ -90,5 +76,5 @@
         .button-50 {
             padding: 12px 50px;
         }
-    } */
+    }
 </style>
