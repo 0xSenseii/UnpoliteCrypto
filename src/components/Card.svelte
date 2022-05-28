@@ -8,7 +8,7 @@
     <!-- Cover -->
     <div class="content">
         <img src="./previews/{src}" alt="preview" />
-        <Button href="./pdfs/{href}"/>
+        <Button href="{href}"/>
     </div>
 </div>
 
